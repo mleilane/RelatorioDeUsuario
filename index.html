@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lista de Usuários</title>
+  </head>
+
+  <body>
+    <h1>Tabela de Usuários 📰</h1>
+
+    <table id="users-table">
+      <!-- Criação da tabela-->
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Email</th>
+          <th>País</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- Os dados dos usuários serão inseridos aqui pelo JavaScript -->
+      </tbody>
+    </table>
+
+    <script>
+      //criação da função assíncrona para realizar a requisição GET para o servidor local
+      async function getUsers() {
+        const response = await fetch("http://localhost:5500/users");
+        const usersHtml = await response.text(); // Receber o conteúdo HTML retornado
+
+        // Inserir o conteúdo HTML na tabela
+        document.getElementById("users-table").innerHTML = usersHtml;
+      }
+      getUsers();
+    </script>
+  </body>
+</html>
