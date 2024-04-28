@@ -8,7 +8,7 @@ Este projeto criar uma aplicação web para exibir uma lista de usuários em uma
 ## Bibliotecas Utilizadas
 
 - Express:  framework web para Node.js que simplifica a criação de aplicativos web e APIs.
-- Cors: Um middleware para Express que permite habilitar o Cross-Origin Resource Sharing (CORS).
+- Cors: Facilita a configuração da política de segurança do navegador, permitindo que a aplicação frontend faça requisições para um backend.
 - pg: Facilita a conexão e a interação com bancos de dados PostgreSQL.
 
 ##
